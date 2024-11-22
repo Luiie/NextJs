@@ -6,7 +6,7 @@ export default function Layout({
   return (
     <div>
         {children}
-        <div>There are 3 rooms.</div>
+        <div>There are 7 furnitures.</div>
     </div>
   )
 }
