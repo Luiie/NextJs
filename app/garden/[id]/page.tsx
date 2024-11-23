@@ -24,8 +24,7 @@ export default async function gardenPlace(
   {params}: {params: {id: number};}
 ) {
   const { id } = await params;
-  const plantDetail = await getPlantDetail(id);
-  const plantGuide = await getPlantGuide(id);
+  const [plantDetail, plantGuide] = await Promise.all([getPlantDetail(id), getPlantGuide(id)]);
   return (
     <div>
       <h2>Garden, {plantDetail.common_name}</h2>
