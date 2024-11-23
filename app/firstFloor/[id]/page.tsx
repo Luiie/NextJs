@@ -1,8 +1,9 @@
-import { API_URL } from "../page";
+const API_PLANT_URL = `https://perenual.com/api/species/details/${id}?key=sk-IYG467414114324a37743`;
 
 async function getFurniture(id:string) {
   const response = await fetch(`${API_URL}/${id}`);
-  return response.json();
+  const json = response.json();
+  return json;
 }
 
 export default async function firstFloorRoom(
