@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const API_PLANT_URL = "https://perenual.com/api/species-list?key=sk-IYG467414114324a37743";
+export const API_PLANT_URL = "https://perenual.com/api/species-list?key=sk-IYG467414114324a37743";
 
 async function getPlants(){
     const response = await fetch(API_PLANT_URL);
