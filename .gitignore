@@ -5,3 +5,4 @@ package.json
 tsconfig.json
 next-env.d.ts
 *.env
+apiKey.tsx
