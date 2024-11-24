@@ -1,4 +1,4 @@
-const API_PLANT_URL = `https://perenual.com/api/species/details/${id}?key=sk-IYG467414114324a37743`;
+const API_URL = "https://5f210aa9daa42f001666535e.mockapi.io/api/products";
 
 async function getFurniture(id:string) {
   const response = await fetch(`${API_URL}/${id}`);

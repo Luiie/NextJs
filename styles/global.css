@@ -1,0 +1,127 @@
+/* Reset default styles */
+html, body, div, h1, li, img, nav, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+  
+body {
+    font-family: 'Gill Sans', system-ui; /* 고급스러운 Serif 글꼴 */
+    background-color: #f4f4f4; /* 대리석 느낌을 연상시키는 밝은 색 배경 */
+    color: #333; /* 기본 텍스트 색상 */
+    line-height: 1.6;
+}
+  
+h1 {
+    font-family: 'Gill Sans', system-ui;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ddd; /* 밝은 회색 */
+    text-align: center;
+    margin-top: 50px;
+}
+  
+div {
+    padding: 20px;
+    background-color: #fff; /* 흰색 배경 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px; /* 최대 너비 */
+}
+  
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 메뉴 항목 간의 간격 */
+}
+
+li {
+    font-size: 1.1rem;
+    color: #4b4b4b; /* 세련된 어두운 회색 */
+    margin-bottom: 10px;
+    transition: font-weight 0.3s ease; /* 글자가 굵어지는 애니메이션 */
+}
+
+li:hover {
+    font-weight: bold; /* hover시 글자 굵어짐 */
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+  
+/* Marble background effect */
+.marble-bg {
+    background-image: url('https://www.example.com/marble-texture.jpg'); /* 대리석 텍스처 이미지 */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Nav styles */
+nav {
+    background-color: #2f2f2f; /* 어두운 색 배경 */
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 50%;
+    z-index: 10;
+    border-radius: 50px;
+    transform: translateX(+50%);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #ddd;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+nav li:hover {
+    color: #fff; /* hover시 글자 색 변경 */
+    font-weight: bold; /* hover시 글자 굵어짐 */
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+  
+    div {
+        padding: 15px;
+    }
+  
+    li {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}

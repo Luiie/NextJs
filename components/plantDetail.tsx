@@ -16,7 +16,7 @@ export default async function PlantDetail({id}: {id: number}) {
     return (
         <div>
             <h2>Garden, {detail.common_name}</h2>
-            <div>{detail.id}</div>
+            <div>{detail.cycle} {detail.type}</div>
             <img src={detail.default_image.small_url} />
             <div>{JSON.stringify(detail.description)}</div>
         </div>
