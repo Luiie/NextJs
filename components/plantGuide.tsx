@@ -12,7 +12,7 @@ export default async function PlantGuide({id}: {id: number}) {
     const guide = await getPlantGuide(id);
     return (
         <div>
-            {guide.section.map((sec) => (
+            {guide[0].section.map((sec) => (
                 <div>- {sec.type}: {sec.description}</div>
             ))}
         </div>
