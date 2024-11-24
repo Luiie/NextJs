@@ -3,6 +3,10 @@ import { API_KEY } from "../../apiKey";
 
 export const API_PLANT_URL = `https://perenual.com/api/species-list?key=${API_KEY}`;
 
+export const metadata = {
+    title: "garden"
+};
+
 async function getPlants(){
     const response = await fetch(API_PLANT_URL);
     const json = await response.json();
