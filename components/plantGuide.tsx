@@ -1,4 +1,4 @@
-import { API_KEY } from "../apiKey";
+const API_KEY = process.env.API_KEY;
 
 const API_PLANT_GUIDE_URL = `https://perenual.com/api/species-care-guide-list?key=${API_KEY}`;
 

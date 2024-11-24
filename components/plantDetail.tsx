@@ -1,4 +1,4 @@
-import { API_KEY } from "../apiKey";
+const API_KEY = process.env.API_KEY;
 
 function getPlantDetailUrl(id: number) {
     return `https://perenual.com/api/species/details/${id}?key=${API_KEY}`;

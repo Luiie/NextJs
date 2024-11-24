@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { API_KEY } from "../../apiKey";
+
+const API_KEY = process.env.API_KEY;
 
 export const API_PLANT_URL = `https://perenual.com/api/species-list?key=${API_KEY}`;
 
