@@ -14,7 +14,7 @@ export async function generateMetadata({params: {id}}: {params: {id: string};}) 
 }
 
 export default async function firstFloorRoom(
-  {params}: {params: {id: string};}
+  {params}: {params: Promise<{ id: string }>}
 ) {
     const { id } = await params;
     const furniture = await getFurniture(id);
