@@ -6,7 +6,10 @@ async function getFurniture(id:string) {
   return json;
 }
 
-export async function generateMetadata({params: {id}}: {params: {id: string};}) {
+export async function generateMetadata(
+  {params}: {params: Promise<{ id: string }>}
+) {
+  const { id } = await params;
   const furniture = await getFurniture(id);
   return {
     title: furniture.title,

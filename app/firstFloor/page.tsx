@@ -4,10 +4,8 @@ export const metadata = {
     title: "1st floor"
 };
 
-export const API_URL = "https://5f210aa9daa42f001666535e.mockapi.io/api/products";
-
 async function getFurnitures() {
-    const response = await fetch(API_URL);
+    const response = await fetch("https://5f210aa9daa42f001666535e.mockapi.io/api/products");
     const json = await response.json();
     return json;
 }

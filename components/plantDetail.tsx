@@ -1,17 +1,17 @@
 const API_KEY = process.env.API_KEY;
 
-function getPlantDetailUrl(id: number) {
+function getPlantDetailUrl(id: string) {
     return `https://perenual.com/api/species/details/${id}?key=${API_KEY}`;
 }
 
-async function getPlantDetail(id: number) {
+async function getPlantDetail(id: string) {
     const API_PLANT_DETAIL_URL = getPlantDetailUrl(id);
     const response = await fetch(API_PLANT_DETAIL_URL);
     const json = await response.json();
     return json;
 }
 
-export default async function PlantDetail({id}: {id: number}) {
+export default async function PlantDetail({id}: {id: string}) {
     const detail = await getPlantDetail(id);
     return (
         <div>
