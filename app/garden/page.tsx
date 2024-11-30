@@ -13,11 +13,12 @@ async function getPlants(){
 }
 
 export default async function garden(){
-    const plants = await getPlants();
+    const plantsData = await getPlants();
+    const plants = await plantsData.data;
     return (
         <div>
             <h1>Garden</h1>
-            <div>{plants.data?.map((plant) => (
+            <div>{plants.map((plant) => (
                 <li key={plant.id}>
                     <Link href={`/garden/${plant.id}`}>{plant.common_name}</Link>
                 </li>
