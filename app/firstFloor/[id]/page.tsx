@@ -6,7 +6,7 @@ async function getFurniture(id:string) {
   return json;
 }
 
-export async function generateMetadata({params: {id}}: {params: {id: String};}) {
+export async function generateMetadata({params: {id}}: {params: {id: string};}) {
   const furniture = await getFurniture(id);
   return {
     title: furniture.title,
@@ -14,8 +14,9 @@ export async function generateMetadata({params: {id}}: {params: {id: String};}) 
 }
 
 export default async function firstFloorRoom(
-  {params: {id}}: {params: {id: String};}
+  {params}: {params: {id: string};}
 ) {
+    const { id } = await params;
     const furniture = await getFurniture(id);
     return (
       <div>

@@ -3,7 +3,7 @@ import PlantGuide from "../../../components/plantGuide";
 import PlantDetail from "../../../components/plantDetail";
 
 export default async function gardenPlace(
-  {params}: {params: {id: number};}
+  {params}: {params: {id: string};}
 ) {
   const { id } = await params;
   return (
